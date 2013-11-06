@@ -64,4 +64,5 @@ for PKG in ${(k)PACKAGES}; do
     fi
 done
 
-
+# add subl link
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
