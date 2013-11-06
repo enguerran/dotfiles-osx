@@ -9,6 +9,8 @@ brew upgrade
 # Install apps
 brew install git
 brew install node
+brew install wget
+brew install ngrep
 
 # Install native apps
 brew tap phinze/homebrew-cask
