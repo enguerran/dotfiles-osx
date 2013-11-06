@@ -1,0 +1,44 @@
+#!/bin/zsh
+
+echo_title_update "OS X options"
+
+chflags nohidden $HOME/Library
+
+## Defaults
+
+# Dashboard.app not ass a space
+defaults write com.apple.dock dashboard-in-overlay -bool true
+
+# Faster animation when switching spaces
+defaults write com.apple.dock expose-animation-duration -float 0.15
+
+# no .DS_Store on newtwork
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# disk utility debug menu
+defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
+
+# disable auto correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# expand save dialog
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# expand print dialog
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# keyboard control access
+defaults write NSGlobalDomain AppleKeyboardUIMode 3
+
+# no boucing icons
+defaults write com.apple.dock no-bouncing -bool true
+
+# dim hidden apps
+defaults write com.apple.dock showhidden -bool true
+
+# remove download quarantine
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Use scroll gesture with the Ctrl (^) key to zoom
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask 262144
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
