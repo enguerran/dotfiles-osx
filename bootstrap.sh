@@ -54,8 +54,10 @@ echo_title_installupdate "NPM packages"
 
 typeset -A PACKAGES
 PACKAGES=(
+"grunt-cli"
 "mocha"
 "nodemon"
+"peerflix"
 )
 
 for PKG in ${(k)PACKAGES}; do
