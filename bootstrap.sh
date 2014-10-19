@@ -58,6 +58,7 @@ doIt() {
     brewcaskinstall "Spotify"
     brewcaskinstall "Sublime Text3"
     brewcaskinstall "Vlc"
+    brewcaskinstall "Moom"
 
     # configure application
     # - sublime text 3 -
