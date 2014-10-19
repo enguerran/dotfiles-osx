@@ -6,28 +6,9 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install apps
-brew install git
-brew install node
-brew install wget
-brew install ngrep
-brew install mongodb
-
 # Install native apps
-brew tap phinze/homebrew-cask
-brew install brew-cask
-function installcask() {
-    brew cask install "${@}" --appdir="/Applications" 2> /dev/null
-}
-installcask dropbox
-installcask iterm2
-installcask sublime-text-2
-installcask virtualbox
-installcask vlc
-installcask firefox
-installcask transmission
-installcask subtitles
-installcask steam
+brew install caskroom/cask/brew-cask
+brewtap caskroom/versions
 
 # Remove outdated versions from the cellar
 brew cleanup

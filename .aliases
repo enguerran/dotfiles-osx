@@ -78,3 +78,6 @@ alias gpaas_ssh="ssh $1@$GPAAS_SSH_HOST"
 # config zsh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# brew
+alias brewcasksearch="brew cask search"

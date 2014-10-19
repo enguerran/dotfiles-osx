@@ -15,35 +15,39 @@ export CHAR_BOOM=💥
 export CHAR_STARTER=❯
 
 echo_info () {
-  echo "${COLOR_BLUE}i${COLOR_RESET} $1"
+  echo "${COLOR_BLUE}i${COLOR_RESET} $@"
 }
 
 echo_user () {
-  echo "${COLOR_YELLOW}?${COLOR_RESET} $1"
+  echo "${COLOR_YELLOW}?${COLOR_RESET} $@"
 }
 
 echo_success () {
-  echo "${COLOR_GREEN}${CHAR_OK}${COLOR_RESET} $1"
+  echo "${COLOR_GREEN}${CHAR_OK}${COLOR_RESET} $@"
+}
+
+echo_boom () {
+  echo “${COLOR_RED}${CHAR_BOOM} $@ ${COLOR_RESET}”
 }
 
 echo_fail () {
-  echo "${COLOR_RED}${CHAR_ERROR}${COLOR_RESET} $1"
+  echo "${COLOR_RED}${CHAR_ERROR}${COLOR_RESET} $@"
   echo ''
   exit
 }
 
 echo_title () {
-  echo "${COLOR_CYAN}${CHAR_STARTER} $@${COLOR_RESET}"
+  echo "${COLOR_CYAN}${CHAR_STARTER} $@ ${COLOR_RESET}"
 }
 
 echo_title_install () {
-  echo_title "Installing" $1 "..."
+  echo_title "Installing" $@ "..."
 }
 
 echo_title_update () {
-  echo_title "Updating" $1 "..."
+  echo_title "Updating" $@ "..."
 }
 
 echo_title_installupdate () {
-  echo_title "Installing/Updating" $1 "..."
+  echo_title "Installing/Updating" $@ "..."
 }
