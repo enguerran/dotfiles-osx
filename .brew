@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Make sure brew is up-to-date
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install native apps
+brew install caskroom/cask/brew-cask
+brewtap caskroom/versions
+
+# Remove outdated versions from the cellar
+brew cleanup
