@@ -13,4 +13,11 @@ plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
 
+# add your var env in ~/.exports and your aliases in ~/.aliases
+for file in ~/.{exports,aliases}
+do
+    [ -r "$file" ] && source "$file"
+done
+unset file
+
 export PATH="$HOME/bin:/usr/local/bin:$PATH"

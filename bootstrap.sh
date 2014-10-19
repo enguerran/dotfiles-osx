@@ -36,14 +36,6 @@ doIt() {
     fi
     source ~/.zshrc
 
-    # install export and aliases
-    echo_title_update "exports and aliases"
-    for file in ~/.{export,aliases}
-    do
-        [ -r "$file" ] && source "$file"
-    done
-    unset file
-
     # set OSX
     source ~/.osxdefaults
 
