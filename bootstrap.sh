@@ -50,15 +50,18 @@ doIt() {
     source ~/.brew
 
     # install applications
+    brewcaskinstall "BitTorrent Sync"
+    brewcaskinstall "Dash"
+    brewcaskinstall "Evernote"
     brewcaskinstall "Firefox"
     #brewcaskinstall "Firefox Nightly" "$HOME/Applications"
     #brewcaskinstall "Firefox Aurora" "$HOME/Applications"
-    brewcaskinstall "Steam"
-    brewcaskinstall "BitTorrent Sync"
+    brewcaskinstall "iterm2"
+    brewcaskinstall "Moom"
     brewcaskinstall "Spotify"
+    brewcaskinstall "Steam"
     brewcaskinstall "Sublime Text3"
     brewcaskinstall "Vlc"
-    brewcaskinstall "Moom"
 
     # configure application
     # - sublime text 3 -
