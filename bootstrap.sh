@@ -36,36 +36,43 @@ doIt() {
     fi
     source ~/.zshrc
 
-    # set OSX
-    source ~/.osxdefaults
+    if ! type "ls_release" 2>/dev/null; then
+        # linux
 
-    # set brew
-    echo_title_install Homebrew
-    if ! type "brew" > /dev/null
-    then
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        # - sublime text 3 -
+        git clone https://github.com/enguerran/sublimesettings.git $HOME/.config/sublime-text-3/Packages/User
     else
-        echo_success "Homebrew is already installed"
+        # set OSX
+        source ~/.osxdefaults
+
+        # set brew
+        echo_title_install Homebrew
+        if ! type "brew" > /dev/null
+        then
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        else
+            echo_success "Homebrew is already installed"
+        fi
+        source ~/.brew
+
+        # install applications
+        brewcaskinstall "BitTorrent Sync"
+        brewcaskinstall "Dash"
+        brewcaskinstall "Evernote"
+        brewcaskinstall "Firefox"
+        #brewcaskinstall "Firefox Nightly" "$HOME/Applications"
+        #brewcaskinstall "Firefox Aurora" "$HOME/Applications"
+        brewcaskinstall "iterm2"
+        brewcaskinstall "Moom"
+        brewcaskinstall "Spotify"
+        brewcaskinstall "Steam"
+        brewcaskinstall "Sublime Text3"
+        brewcaskinstall "Vlc"
+
+        # configure application
+        # - sublime text 3 -
+        git clone https://github.com/enguerran/sublimesettings.git $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
     fi
-    source ~/.brew
-
-    # install applications
-    brewcaskinstall "BitTorrent Sync"
-    brewcaskinstall "Dash"
-    brewcaskinstall "Evernote"
-    brewcaskinstall "Firefox"
-    #brewcaskinstall "Firefox Nightly" "$HOME/Applications"
-    #brewcaskinstall "Firefox Aurora" "$HOME/Applications"
-    brewcaskinstall "iterm2"
-    brewcaskinstall "Moom"
-    brewcaskinstall "Spotify"
-    brewcaskinstall "Steam"
-    brewcaskinstall "Sublime Text3"
-    brewcaskinstall "Vlc"
-
-    # configure application
-    # - sublime text 3 -
-    git clone https://github.com/enguerran/sublimesettings.git $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 }
 
 # copy dotfile from local repo to home
