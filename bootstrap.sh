@@ -55,24 +55,28 @@ doIt() {
         fi
         source ~/.brew
 
-        # install applications
-        brewcaskinstall "BitTorrent Sync"
-        brewcaskinstall "Dash"
-        brewcaskinstall "Evernote"
-        brewcaskinstall "Firefox"
-        #brewcaskinstall "Firefox Nightly" "$HOME/Applications"
-        #brewcaskinstall "Firefox Aurora" "$HOME/Applications"
-        brewcaskinstall "iterm2"
-        brewcaskinstall "Moom"
-        brewcaskinstall "Spotify"
-        brewcaskinstall "Steam"
-        brewcaskinstall "Sublime Text3"
-        brewcaskinstall "Vlc"
+    # install applications
+    brewcaskinstall "BitTorrent Sync"
+    brewcaskinstall "Dash"
+    brewcaskinstall "Dropbox"
+    brewcaskinstall "Evernote"
+    brewcaskinstall "Firefox"
+    #brewcaskinstall "Firefox Nightly" "$HOME/Applications"
+    #brewcaskinstall "Firefox Aurora" "$HOME/Applications"
+    brewcaskinstall "iterm2"
+    brewcaskinstall "Moom"
+    brewcaskinstall "p4merge"
+    brewcaskinstall "Spotify"
+    brewcaskinstall "Steam"
+    brewcaskinstall "Sublime Text3"
+    brewcaskinstall "Vlc"
 
-        # configure application
-        # - sublime text 3 -
-        git clone https://github.com/enguerran/sublimesettings.git $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-    fi
+    # configure application
+    # - sublime text 3 -
+    git clone https://github.com/enguerran/sublimesettings.git $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+    # - p4merge -
+    mv ~/p4merge /usr/local/bin/p4merge
+    chmod 775 /usr/local/bin/p4merge
 }
 
 # copy dotfile from local repo to home
