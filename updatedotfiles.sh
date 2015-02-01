@@ -12,4 +12,4 @@ unset file
 echo_title "Bootstrap dotfiles update"
 
 echo_title_install "dotfiles to home directory"
-    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "functions/" --exclude "resources/" --exclude "update.sh" --exclude "p4merge" --exclude "functions.sh" --exclude "README.md" -av --no-perms . ~
+    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "functions/" --exclude "resources/" --exclude "updatedotfiles.sh" --exclude "p4merge" --exclude "functions.sh" --exclude "README.md" -av --no-perms . ~

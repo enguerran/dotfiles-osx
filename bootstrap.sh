@@ -24,7 +24,7 @@ echo_title "Bootstrap dotfiles installation"
 doIt() {
     # copy dotfiles to home directory
     echo_title_install "dotfiles to home directory"
-    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "functions/" --exclude "functions.sh" --exclude "README.md" -av --no-perms . ~
+    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "functions/" --exclude "resources/" --exclude "updatedotfiles.sh" --exclude "p4merge" --exclude "functions.sh" --exclude "README.md" -av --no-perms . ~
 
     # configure zsh
     echo_title_install "oh-my-zsh and configure it"
