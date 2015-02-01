@@ -30,6 +30,19 @@
     le = log --oneline --decorate
     filelog = log -u
     fl = log -u
+    lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ar)%Creset'
+    oops = commit --amend --no-edit
+[log]
+    abbrevCommit = true
+[pull]
+    rebase = preserve
+[push]
+    default = upstream
+[status]
+    submoduleSummary = true
+    showUntrackedFiles = all
+[color "branch"]
+    upstream = cyan
 [merge]
     tool = p4merge
 [mergetool]
