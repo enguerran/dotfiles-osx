@@ -55,6 +55,11 @@ doIt() {
         fi
         source ~/.brew
 
+    # install brew app
+    brew install z
+    brew install node
+    brew install git
+
     # install applications
     brewcaskinstall "BitTorrent Sync"
     brewcaskinstall "Dash"

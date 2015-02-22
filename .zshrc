@@ -21,3 +21,5 @@ done
 unset file
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
+
+. `brew --prefix`/etc/profile.d/z.sh
