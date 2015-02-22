@@ -81,3 +81,6 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # brew
 alias brewcasksearch="brew cask search"
+
+# ruby, gem, rake
+alias rake="bundle exec rake"
