@@ -1,6 +1,7 @@
 [user]
     name = Enguerran
     email = engcolson@gmail.com
+    signingkey = 63F5CF3A
 
 [github]
     user = enguerran
@@ -52,3 +53,5 @@
     path = /usr/local/bin/p4merge
 [diff]
     tool = p4merge
+[http]
+    sslVerify = false

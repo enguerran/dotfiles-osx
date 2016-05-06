@@ -78,9 +78,7 @@ alias gpaas_ssh="ssh $1@$GPAAS_SSH_HOST"
 # config zsh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias code="visual-studio-code"
 
-# brew
-alias brewcasksearch="brew cask search"
 
-# ruby, gem, rake
-alias rake="bundle exec rake"
+alias tmux="tmux -2"
